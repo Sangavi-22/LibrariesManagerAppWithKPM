@@ -1,0 +1,57 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "tabBar_collections" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Collections"
+          }
+        },
+        "ta-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "தொகுப்புகள்"
+          }
+        }
+      }
+    },
+    "tabBar_home" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Home"
+          }
+        },
+        "ta-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "முகப்பு"
+          }
+        }
+      }
+    },
+    "tabBar_profile" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profile"
+          }
+        },
+        "ta-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "சுயவிவரம்"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
