@@ -31,17 +31,6 @@ extension SearchPageVC: UITableViewDelegate, UITableViewDataSource{
         let book = self.searchResults[indexPath.row]
         let bookDetailVC = BookDetailVC(book: book, library: viewModel.getLibrary(with: book.libraryId))
         self.navigationController?.pushViewController(bookDetailVC, animated: true)
-//        let book = searchResult[indexPath.row]
-//        if isAMember(){
-//            let bookDetailVC = BookDetailVC()
-//            bookDetailVC.configure(with: book.id)
-//            self.navigationController?.pushViewController(bookDetailVC, animated: true)
-//        }
-//        else{
-//            let bookToEditInDetailVC = BookToEditInDetailVC()
-//            bookToEditInDetailVC.configure(with: book.id)
-//            self.navigationController?.pushViewController(bookToEditInDetailVC, animated: true)
-//        }
     }
 }
 

@@ -31,6 +31,7 @@ extension LibraryBooksCollectionTVCell: UICollectionViewDelegate, UICollectionVi
         collectionView.deselectItem(at: indexPath, animated: true)
         if let book = self.library?.books[indexPath.row] {
             let bookDetailVC = BookDetailVC(book: book, library: library)
+            self.parentVC?.navigationController?.pushViewController(bookDetailVC, animated: true)
         }
     }
 }

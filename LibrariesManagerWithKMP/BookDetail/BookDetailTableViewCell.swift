@@ -26,10 +26,6 @@ class BookDetailTableViewCell: UITableViewCell {
     
     let viewModel = BookDetailVM()
     
-    func configure(with book: Book_) {
-        
-    }
-    
     var addBooks: Bool = true
     var borrow: Bool?
     
