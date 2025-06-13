@@ -65,6 +65,8 @@
 			membershipExceptions = (
 				MainTabBar/MainTabBarController.swift,
 				MyCollectionsTab/MyCollectionsTabVC.swift,
+				MyCollectionsTab/MyCollectionsTabVM.swift,
+				"MyCollectionsTab/MyCollectionTabVC + CollectionViewDelegates.swift",
 				ProfileTab/ProfileTabVC.swift,
 			);
 			target = 9AE8494B2DF1C9A600E38475 /* LibrariesManagerWithKMPTests */;
@@ -74,6 +76,8 @@
 			membershipExceptions = (
 				MainTabBar/MainTabBarController.swift,
 				MyCollectionsTab/MyCollectionsTabVC.swift,
+				MyCollectionsTab/MyCollectionsTabVM.swift,
+				"MyCollectionsTab/MyCollectionTabVC + CollectionViewDelegates.swift",
 				ProfileTab/ProfileTabVC.swift,
 			);
 			target = 9AE849552DF1C9A600E38475 /* LibrariesManagerWithKMPUITests */;
