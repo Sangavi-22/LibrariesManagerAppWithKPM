@@ -1,6 +1,108 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "common_no_data" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No data found"
+          }
+        },
+        "ta-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "தரவு இல்லை"
+          }
+        }
+      }
+    },
+    "common_no_results_found" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No results found"
+          }
+        },
+        "ta-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "முடிவுகள் எதுவும் கிடைக்கவில்லை"
+          }
+        }
+      }
+    },
+    "common_unknown_error" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown error occurred "
+          }
+        },
+        "ta-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "அறியப்படாத பிழை ஏற்பட்டது"
+          }
+        }
+      }
+    },
+    "search_bar_placeholder" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search books, authors"
+          }
+        },
+        "ta-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "புத்தகங்கள், ஆசிரியர்கள் தேடுங்கள்"
+          }
+        }
+      }
+    },
+    "see_all" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See All"
+          }
+        },
+        "ta-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "அனைத்தையும் பார்"
+          }
+        }
+      }
+    },
+    "share_book_message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I have shared details of the book titled %@. Click the link to know more."
+          }
+        },
+        "ta-IN" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "நான் %@ புத்தகத்தின் விவரங்களைப் பகிர்ந்துள்ளேன். மேலும் அறிய இணைப்பைக் கிளிக் செய்யவும்"
+          }
+        }
+      }
+    },
     "tabBar_collections" : {
       "extractionState" : "manual",
       "localizations" : {
