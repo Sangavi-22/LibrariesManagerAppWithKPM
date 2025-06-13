@@ -123,11 +123,11 @@ class LandingPageVC: UIViewController {
     }
     
     func switchToSignIn(choice: Bool) {
-//        if choice {
-//            let signInPageVC = createInstanceOfSignInPage()
-//            let navController = UINavigationController(rootViewController: signInPageVC)
-//            self.present(navController, animated: true)
-//        }
+        if choice {
+            let signInPageVC = createInstanceOfSignInPage()
+            let navController = UINavigationController(rootViewController: signInPageVC)
+            self.present(navController, animated: true)
+        }
 //        else {
 //            let signUpPageVC = createInstanceOfSignUpPage()
 //            let navController = UINavigationController(rootViewController: signUpPageVC)
@@ -140,11 +140,11 @@ class LandingPageVC: UIViewController {
 //        signUpPage.parentVC = self
 //        return signUpPage
 //    }
-//    
-//    func createInstanceOfSignInPage() -> SignInPageVC{
-//        let signInPage = SignInPageVC()
-//        signInPage.parentVC = self
-//        return signInPage
-//    }
+    
+    func createInstanceOfSignInPage() -> SignInPageVC{
+        let signInPage = SignInPageVC()
+        signInPage.parentVC = self
+        return signInPage
+    }
 }
 

@@ -43,7 +43,7 @@ class ProfileTabVM {
                 let newAccount = User(userId: account.userId,
                                       name: account.name,
                                       emailId: account.emailId,
-                                      password: account.password)
+                                      password: newPassword)
                 try dataSource.updateUser(user: newAccount)
             }
         } catch {

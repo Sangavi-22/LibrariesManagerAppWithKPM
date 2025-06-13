@@ -28,7 +28,7 @@ class SignInPageVC: UIViewController{
 
     let titleLabel: UILabel = {
         let titleLabel = UILabel()
-        titleLabel.text = "Book Store"
+        titleLabel.text = "Biblio"
         titleLabel.textAlignment = .center
         titleLabel.font = UIFont(name: "Helvetica-Bold", size: 30)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false

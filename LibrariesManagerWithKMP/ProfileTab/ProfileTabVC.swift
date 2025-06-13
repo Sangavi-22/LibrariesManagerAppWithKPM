@@ -229,7 +229,7 @@ class ProfileTabVC: UIViewController {
             
             userDetailsView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 20),
             userDetailsView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -20),
-            userDetailsView.heightAnchor.constraint(greaterThanOrEqualToConstant: 180),
+            userDetailsView.heightAnchor.constraint(greaterThanOrEqualToConstant: 100),
             
             ordersPlaced.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 20),
             ordersPlaced.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -20),
