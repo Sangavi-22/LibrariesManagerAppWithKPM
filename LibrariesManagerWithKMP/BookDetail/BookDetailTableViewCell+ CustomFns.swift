@@ -127,7 +127,7 @@ extension BookDetailTableViewCell{
         titleLabel.text = book.title
         authorNameLabel.text = book.author
         stockAvailabilityIndicator.text = "Stock available: \(book.stockAvailable)"
-        bookDescription.text = book.description_
+        bookDescription.text = book.description
         starRating.configure(with: book.bookReviews)
         
         let bookReviewsCount = book.bookReviews.count
@@ -153,12 +153,10 @@ extension BookDetailTableViewCell{
             getButton.setTitle("Get", for: .normal)
             getButton.isEnabled = true
             stockAvailabilityIndicator.textColor = .label
-            borrow = false
         } else {
             getButton.setTitle("Get", for: .normal)
             getButton.isEnabled = false
             stockAvailabilityIndicator.textColor = .label
-            borrow = false
         }
     }
     
@@ -182,15 +180,6 @@ extension BookDetailTableViewCell{
     }
     
     @objc func getButtonTapped(){
-        if borrow == true{
-            confirmBorrowBook()
-        }
-        else if borrow == false{
-            confirmRenewBook()
-        }
-    }
-    
-    func confirmBorrowBook(){
         let alertController = UIAlertController(title: "Borrow Book Confirmation", message: "Confirm if you want to borrow this book", preferredStyle: .alert)
         
         let yes = UIAlertAction(title: "Yes", style: .default) {(result: UIAlertAction) -> Void in
@@ -217,7 +206,7 @@ extension BookDetailTableViewCell{
             self.parentVC?.showToast(with: ToastViewContent(image: UIImage(systemName: "checkmark.diamond.fill"),
                                                             title: "Borrowed book"
                                                            ))
-            self.parentVC?.tableView.reloadData()
+            self.parentVC?.reloadAllData()
         }
     }
     
@@ -246,7 +235,7 @@ extension BookDetailTableViewCell{
             viewModel.updateOrder(of: book)
             self.parentVC?.showToast(with: ToastViewContent(image: UIImage(systemName: "checkmark.diamond.fill"),
                                                             title: "Renewed order"))
-            self.parentVC?.tableView.reloadData()
+            self.parentVC?.reloadAllData()
         }
     }
     

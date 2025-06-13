@@ -8,8 +8,8 @@ import UIKit
 import KMPLibrariesManager
 
 class BookDetailVC: UIViewController {
-    let book: Book_
-    let library: Library?
+    var book: Book_?
+    var library: Library?
     
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
@@ -32,7 +32,9 @@ class BookDetailVC: UIViewController {
     
     let notificationName = Notification.Name("review")
     
-    init(book: Book_, library: Library?) {
+    let viewModel = BookDetailVM() 
+    
+    init(book: Book_?, library: Library?) {
         self.book = book
         self.library = library
         super.init(nibName: nil, bundle: nil)
@@ -96,8 +98,8 @@ class BookDetailVC: UIViewController {
     }
     
     @objc func shareBook(){
-        let message = String(format: NSLocalizedString("share_book_message", comment: ""), book.title)
-        let url = URL(string: "bookStore://Book_\(book.id)")
+        let message = String(format: NSLocalizedString("share_book_message", comment: ""), book?.title ?? "")
+        let url = URL(string: "bookStore://Book_\(String(describing: book?.id))")
         self.presentSheet(with: message, and: url)
     }
     
@@ -107,6 +109,12 @@ class BookDetailVC: UIViewController {
         let shareSheetVC = UIActivityViewController(activityItems: [text, url], applicationActivities: nil)
         
         self.present(shareSheetVC, animated: true)
+    }
+    
+    func reloadAllData() {
+        self.book = viewModel.getBook(with: book?.id ?? "")
+        self.library = viewModel.fetchLibrary(with: book?.libraryId ?? "")
+        self.tableView.reloadData()
     }
 }
 

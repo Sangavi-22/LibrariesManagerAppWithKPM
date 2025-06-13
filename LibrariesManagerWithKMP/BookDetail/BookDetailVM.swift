@@ -44,6 +44,13 @@ class BookDetailVM {
             try dataSource.updateBook(book: updatedBook)
 
             // Create order details
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd-MM-yyyy"
+            formatter.locale = Locale(identifier: "en_US_POSIX") // Ensures consistent formatting
+            let borrowedDate = formatter.string(from: Date())
+            let returnDate = formatter.string(from: Calendar.current.date(byAdding: .day, value: 15, to: Date())!)
+
+
             let dateBorrowed = "\(Date())"
             let dateOfReturn = "\(String(describing: Calendar.current.date(byAdding: .day, value: 15, to: Date())))"
 
@@ -112,7 +119,20 @@ class BookDetailVM {
     }
     
     func canBorrow(book: Book_) -> Bool {
-        return getOrderDetails(of: book) == nil
+        return getOrderDetails(of: book) == nil && book.stockAvailable > 0 
     }
+    
+    func getBook(with bookId: String) -> Book_? {
+        do {
+            return try dataSource.getAllBooks().first(where: {$0.id == bookId})
+        } catch {
+            return nil
+        }
+    }
+    
+    func fetchLibrary(with id: String) -> Library? {
+        return try? dataSource.getAllLibraries().first(where: { $0.id == id })
+    }
+    
 
 }

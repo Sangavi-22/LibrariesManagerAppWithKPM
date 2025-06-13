@@ -38,14 +38,6 @@ class BooksTransactionTableViewCell: UITableViewCell {
         return bookTitleLabel
     }()
     
-    let userIdLabel: UILabel = {
-        let userIdLabel = UILabel()
-        userIdLabel.textColor = .systemGray
-        userIdLabel.font = .systemFont(ofSize: 15, weight: .semibold)
-        userIdLabel.translatesAutoresizingMaskIntoConstraints = false
-        return userIdLabel
-    }()
-    
     let borrowedDateLabel: UILabel = {
         let borrowedDateLabel = UILabel()
         borrowedDateLabel.font = .systemFont(ofSize: 15, weight: .regular)
@@ -88,7 +80,6 @@ class BooksTransactionTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         bookTitleLabel.text = nil
-        userIdLabel.text = nil
         borrowedDateLabel.text = nil
         returnDateLabel.text = nil
         deliveryStatusLabel.text = nil
@@ -129,12 +120,7 @@ class BooksTransactionTableViewCell: UITableViewCell {
             bookTitleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
             bookTitleLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 30),
             
-            userIdLabel.leadingAnchor.constraint(equalTo: bookImage.trailingAnchor, constant: 18),
-            userIdLabel.topAnchor.constraint(equalTo: bookTitleLabel.bottomAnchor),
-            userIdLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
-            userIdLabel.heightAnchor.constraint(equalToConstant: 20),
-            
-            borrowedDateLabel.topAnchor.constraint(equalTo: userIdLabel.bottomAnchor),
+            borrowedDateLabel.topAnchor.constraint(equalTo: bookTitleLabel.bottomAnchor),
             borrowedDateLabel.leadingAnchor.constraint(equalTo: bookImage.trailingAnchor, constant: 18),
             borrowedDateLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
             borrowedDateLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 25),
@@ -161,7 +147,6 @@ class BooksTransactionTableViewCell: UITableViewCell {
         configureLabels(with: order, isOverDue: isOverDue)
         bookImage.image = UIImage(named: book.bookImage)
         bookTitleLabel.text = book.title
-        userIdLabel.text = "User ID: \(order.userId)"
         enlargedImageVC.configure(with: UIImage(named: book.bookImage) ?? UIImage(systemName: "books.vertical.fill")!)
     }
     
